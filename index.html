@@ -2,9 +2,14 @@
 <html>
     <body>
         <p>
-            <a href="com.autonomice1.caterpillar://auth">
+            <a id="redirect-link" href="com.autonomice1.caterpillar://auth">
                 Back to app
             </a>
         </p>
+        <script>
+        	const urlParameters = location.search.split("?")[1];
+        	const redirectLink = document.getElementById("redirect-link");
+        	redirectLink.href = "com.autonomice1.caterpillar://auth?" + urlParameters;
+        </script>
     </body>
 </html>
